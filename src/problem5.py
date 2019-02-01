@@ -145,10 +145,19 @@ def problem5(seq_of_seq):
       :rtype: (list of int) | int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
+    list = []
+    for k in range(len(seq_of_seq)):
+        maxval = -200000
+        for j in range(len(seq_of_seq[k])):
+            if seq_of_seq[k][j] > maxval:
+                maxval = seq_of_seq[k][j]
+        if len(seq_of_seq[k]) > 0:
+            list = list + [maxval]
+    return list
 
 ###############################################################################
 # Our tests use the following to print error messages in red.

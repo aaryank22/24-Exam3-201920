@@ -126,7 +126,7 @@ def problem1(n):
       :rtype: int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # **** IMPORTANT ****:
     # We supplied a   fibonacci   function above.
@@ -139,7 +139,15 @@ def problem1(n):
     # and THEN try the full-credit version.
     # As always, CONTINUE to the next problem if you are STUCK on this one.
     # -------------------------------------------------------------------------
-
+    n1 = 1
+    n2 = 0
+    while True:
+        prev = n1
+        n1 = n1 + n2
+        if n1 >= n:
+            n2 = prev
+            return n2
+        n2 = prev
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
